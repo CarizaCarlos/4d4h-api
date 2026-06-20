@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Http\Requests\GameDownload;
+namespace App\Http\Requests\SubmissionDownload;
 
 use Illuminate\Contracts\Validation\ValidationRule;
 use Illuminate\Foundation\Http\FormRequest;
 
-class StoreGameDownloadRequest extends FormRequest
+class StoreSubmissionDownloadRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.

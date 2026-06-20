@@ -6,16 +6,16 @@ use Illuminate\Database\Eloquent\Attributes\Fillable;
 use Illuminate\Database\Eloquent\Model;
 
 #[Fillable(['team_id', 'title', 'description', 'itch_url', 'miniature_url'])]
-class Game extends Model
+class Submission extends Model
 {
-    public function gameImages()
+    public function submissionMultimedia()
     {
-        return $this->hasMany(GameImage::class);
+        return $this->hasMany(SubmissionMultimedia::class);
     }
 
-    public function gameDownloads()
+    public function submissionDownloads()
     {
-        return $this->hasMany(GameDownload::class);
+        return $this->hasMany(SubmissionDownload::class);
     }
 
     public function nominations()

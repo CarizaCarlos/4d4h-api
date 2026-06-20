@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Attributes\Fillable;
 use Illuminate\Database\Eloquent\Model;
 
-#[Fillable(['admin_id', 'game_id', 'category_id', 'final_rank'])]
+#[Fillable(['admin_id', 'submission_id', 'category_id', 'final_rank'])]
 class Nomination extends Model
 {
     public function votes()
@@ -18,9 +18,9 @@ class Nomination extends Model
         return $this->belongsTo(User::class, 'admin_id');
     }
 
-    public function game()
+    public function submission()
     {
-        return $this->belongsTo(Game::class);
+        return $this->belongsTo(Submission::class);
     }
 
     public function category()

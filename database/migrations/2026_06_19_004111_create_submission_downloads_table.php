@@ -11,10 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('game_downloads', function (Blueprint $table) {
+        Schema::create('submission_downloads', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->foreignId('game_id')->constrained('games');
+            $table->foreignId('submission_id')->constrained('submissions');
             $table->string('url', 2048);
             $table->timestamps();
         });
@@ -25,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('game_downloads');
+        Schema::dropIfExists('submission_downloads');
     }
 };

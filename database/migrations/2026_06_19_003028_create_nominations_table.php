@@ -14,13 +14,13 @@ return new class extends Migration
         Schema::create('nominations', function (Blueprint $table) {
             $table->id();
             $table->foreignId('admin_id')->constrained('users');
-            $table->foreignId('game_id')->constrained('games');
+            $table->foreignId('submission_id')->constrained('submissions');
             $table->foreignId('category_id')->constrained('categories');
             $table->decimal('final_score', 9, 8)->nullable();
             $table->unsignedInteger('final_rank')->nullable();
             $table->timestamps();
 
-            $table->unique(['game_id', 'category_id']);
+            $table->unique(['submission_id', 'category_id']);
         });
     }
 

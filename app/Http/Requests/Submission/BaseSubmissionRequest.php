@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Http\Requests\Game;
+namespace App\Http\Requests\Submission;
 
 use Illuminate\Contracts\Validation\ValidationRule;
 use Illuminate\Foundation\Http\FormRequest;
 
-class UpdateGameRequest extends FormRequest
+class BaseSubmissionRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
